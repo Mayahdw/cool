@@ -1,5 +1,6 @@
 # Password cracking project
 2nd NW cybersecurity project
+Mayah Whitmire and Elisa Garcia
 # Inputted arguements
 input in plaintext
 types=
