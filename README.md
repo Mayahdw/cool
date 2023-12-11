@@ -1,6 +1,6 @@
-#Password cracking project
+# Password cracking project
 2nd NW cybersecurity project
-#Inputted arguements
+# Inputted arguements
 input in plaintext
 types=
 - plaintext
@@ -10,6 +10,6 @@ types=
 methods=
 - dictionary
 - brute force
-#Used files
+# Used files
 - top 10k passwords
 - main.py
