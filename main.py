@@ -36,6 +36,7 @@ def compareType(t2):
 pwd = sys.argv[1]
 if pwd in typeList:
     print("*No password inputted*")
+    quit()
 
 #if method is dictionary, will check which the type is
 if method == "dictionary":
