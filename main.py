@@ -46,10 +46,10 @@ if method == "dictionary":
             setType(x)
 
 #setting defaults in case the input isn't possible
-if len(type)<1:
+if len(type)==0:
     print("*Type not found, default type : Plaintext*")
     setType("plaintext")
-if len(method)<1:
+if len(method)==0:
     print("*Method not found, default method : Dictionary*")
     setMethod("dictionary")
 if method == "brute force" and type != "plaintext":
