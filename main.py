@@ -1,12 +1,13 @@
+
 import sys, hashlib, bcrypt
 
+#setting variables
 type = ""
 method = ""
 dict_File = ""
 typeList = ["md5", "plaintext", "bcrypt", "sha-256"]
 
-
-# setting types of inputted code to pass cracking types
+#setting types of inputted code to pass cracking types
 def setType(t):
     global type
     t = t.lower()
@@ -19,37 +20,43 @@ def setType(t):
     elif t == "sha-256":
         type == "SHA-256"
 
-
+#setting whether inputted method is dictionary or brute force
 def setMethod(m):
     global method
     method = m
 
-
+#comparing type to types from my set list to determine which type to use
 def compareType(t2):
     if t2 == type:
         return True
     else:
         return False
 
-
+#In case the user accidentally inputs the type into the has input
 pwd = sys.argv[1]
 if pwd in typeList:
     print("*No password inputted*")
+    quit()
 
+#if method is dictionary, will check which the type is
 if method == "dictionary":
     givenType = sys.argv[2]
     for x in typeList:
         if x == givenType:
             setType(x)
 
-if len(type) < 1:
+#setting defaults in case the input isn't possible
+if len(type)<1:
     print("*Type not found, default type : Plaintext*")
     setType("plaintext")
-if len(method) < 1:
+if len(method)<1:
     print("*Method not found, default method : Dictionary*")
+    setMethod("dictionary")
 if method == "brute force" and type != "plaintext":
     print("*Not possible, Brute Force can only work with Plain Text")
+    quit()
 
+#if the hash is possible, using the dictionary method to solve
 if method == "dictionary":
     dictFile = open("passwords.txt")
     for line in dictFile:
@@ -73,6 +80,7 @@ if method == "dictionary":
     print("*password isn't in dictionary*")
     quit()
 
+#If brute force is possible (if it's plain text), solves hash
 if method == "Brute Force":
     pwd2 = ""
     val = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
