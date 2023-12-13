@@ -39,9 +39,10 @@ if pwd in typeList or pwd in methodList:
     quit()
 
 #if method is dictionary, will check which the type is
-print(len(sys.argv))
-givenType = sys.argv[2]
-givenMethod = sys.argv[3]
+if len(sys.argv)>=3:
+    givenType = sys.argv[2]
+if len(sys.argv)>=4:
+    givenMethod = sys.argv[3]
 for x in typeList:
     if x.lower() == givenType:
         setType(x)
