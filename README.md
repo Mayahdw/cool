@@ -19,4 +19,4 @@ methods=
 - python3 main.py 5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8 sha-256 dictionary
 - python3 main.py $2a$10$pLP8rtux67vkDXYUiH84KOtBzqA/rjPcomfyPxuYIzjmMG4fyvRB6 bcrypt dictionary
 - python3 main.py password
-- python3 main.py password plaintext brute force
+- python3 main.py password plaintext bruteforce
