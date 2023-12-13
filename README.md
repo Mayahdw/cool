@@ -11,7 +11,7 @@ input in plaintext
 - bcrypt
 - sha-256
 - 
-  methods:
+methods:
   
 - dictionary
 - brute force
