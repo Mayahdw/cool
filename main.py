@@ -28,6 +28,8 @@ def setMethod(m):
 
 #comparing type to types from my set list to determine which type to use
 def compareType(t2):
+    t2=t2.lower()
+    type=type.lower()
     if t2 == type:
         return True
     else:
@@ -80,6 +82,7 @@ if method == "dictionary":
         elif compareType("SHA-256"):
             hashedPass = hashlib.sha256(newPass)
             test = hashedPass.hexdigest()
+
         if test == pwd and not compareType("BCrypt"):
             print("password : " + line)
             quit()
