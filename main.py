@@ -59,8 +59,8 @@ if len(type)==0:
 if len(method)==0:
     print("*Method not found, default method : Dictionary*")
     setMethod("dictionary")
-if method == "bruteforce" and type != "plaintext":
-    print("*Not possible, Brute Force can only work with Plain Text")
+if method == "bruteforce" and type is not "plaintext":
+    print("*Not possible, Brute Force can only work with Plain Text*")
     quit()
 
 #if the hash is possible, using the dictionary method to solve
