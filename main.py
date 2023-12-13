@@ -1,4 +1,3 @@
-
 import sys, hashlib, bcrypt
 
 #setting variables
