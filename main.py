@@ -28,8 +28,6 @@ def setMethod(m):
 
 #comparing type to types from my set list to determine which type to use
 def compareType(t2):
-    t2=t2.lower()
-    type=type.lower()
     if t2 == type:
         return True
     else:
@@ -79,7 +77,7 @@ if method == "dictionary":
         elif compareType("MD5"):
             hashedPass = hashlib.md5(newPass)
             test = hashedPass.hexdigest()
-        elif compareType("SHA-256"):
+        else:
             hashedPass = hashlib.sha256(newPass)
             test = hashedPass.hexdigest()
 
