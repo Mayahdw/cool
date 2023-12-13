@@ -5,7 +5,8 @@ import sys, hashlib
 type = ""
 method = ""
 dict_File = ""
-typeList = ["md5", "plaintext", "bcrypt", "sha-256"]
+typeList = ["MD5", "PlainText", "BCrypt", "SHA-256"]
+methodList = ["dictionary", "brute force"]
 
 #setting types of inputted code to pass cracking types
 def setType(t):
@@ -23,7 +24,7 @@ def setType(t):
 #setting whether inputted method is dictionary or brute force
 def setMethod(m):
     global method
-    method = m
+    method = m.lower()
 
 #comparing type to types from my set list to determine which type to use
 def compareType(t2):
@@ -34,16 +35,20 @@ def compareType(t2):
 
 #In case the user accidentally inputs the type into the has input
 pwd = sys.argv[1]
-if pwd in typeList:
+if pwd in typeList or pwd in methodList:
     print("*No password inputted*")
     quit()
 
 #if method is dictionary, will check which the type is
 if method == "dictionary":
     givenType = sys.argv[2]
+    givenMethod = sys.argv[3]
     for x in typeList:
         if x == givenType:
             setType(x)
+    for a in methodList:
+        if a == givenMethod:
+            setMethod(a)
 
 #setting defaults in case the input isn't possible
 if len(type)==0:
