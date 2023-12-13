@@ -1,5 +1,5 @@
 
-import sys, hashlib
+import sys, hashlib, bcrypt
 
 #setting variables
 type = ""
