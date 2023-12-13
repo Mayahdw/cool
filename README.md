@@ -20,3 +20,4 @@ methods=
 - python3 main.py $2a$10$sjGLS0mC7BcbIm6vnqH9s.KUfMQmvyv/lI7Dp2TnPPcvKySjKT1HC bcrypt dictionary
 - python3 main.py 12345678
 - python3 main.py baseball plaintext bruteforce
+- python3 main.py mayah plaintext dictionary
