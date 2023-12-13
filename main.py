@@ -6,6 +6,7 @@ method = ""
 dict_File = ""
 typeList = ["MD5", "PlainText", "BCrypt", "SHA-256"]
 methodList = ["dictionary", "bruteforce"]
+test = ""
 
 
 # setting types of inputted code to pass cracking types
