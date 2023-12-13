@@ -43,10 +43,10 @@ if pwd in typeList or pwd in methodList:
 givenType = sys.argv[2]
 givenMethod = sys.argv[3]
 for x in typeList:
-    if x == givenType:
+    if x.lower() == givenType.lower():
         setType(x)
 for a in methodList:
-    if a == givenMethod:
+    if a.lower() == givenMethod.lower():
         setMethod(a)
 
 #setting defaults in case the input isn't possible
