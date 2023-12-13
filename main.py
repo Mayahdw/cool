@@ -23,7 +23,7 @@ def setType(t):
 #setting whether inputted method is dictionary or brute force
 def setMethod(m):
     global method
-    method = m.rstrip().lower()
+    method = m.lower()
 
 #comparing type to types from my set list to determine which type to use
 def compareType(t2):
@@ -39,8 +39,8 @@ if pwd in typeList or pwd in methodList:
     quit()
 
 #if method is dictionary, will check which the type is
-givenType = sys.argv[2:]
-givenMethod = sys.argv[3:]
+givenType = sys.argv[2]
+givenMethod = sys.argv[3]
 for x in typeList:
     if x.lower() == givenType:
         setType(x)
