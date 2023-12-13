@@ -5,7 +5,7 @@ type = ""
 method = ""
 dict_File = ""
 typeList = ["MD5", "PlainText", "BCrypt", "SHA-256"]
-methodList = ["dictionary", "brute force"]
+methodList = ["dictionary", "Brute Force"]
 
 #setting types of inputted code to pass cracking types
 def setType(t):
@@ -24,6 +24,8 @@ def setType(t):
 def setMethod(m):
     global method
     method = m.lower()
+    if m=="bruteforce":
+        method="Brute Force"
 
 #comparing type to types from my set list to determine which type to use
 def compareType(t2):
