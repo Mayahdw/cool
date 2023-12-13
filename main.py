@@ -42,10 +42,10 @@ if pwd in typeList or pwd in methodList:
 givenType = sys.argv[2:]
 givenMethod = sys.argv[3:]
 for x in typeList:
-    if x.lower() == givenType.lower():
+    if x.lower() == givenType:
         setType(x)
 for a in methodList:
-    if a.lower() == givenMethod.lower():
+    if a.lower() == givenMethod:
         setMethod(a)
 if givenType=="sha-256":
     type = "sha-256"
