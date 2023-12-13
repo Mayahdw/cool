@@ -5,28 +5,25 @@ import sys, hashlib
 type = ""
 method = ""
 dict_File = ""
-typeList = ["m", "p", "b", "s"]
+typeList = ["md5", "plaintext", "bcrypt", "sha-256"]
 
 #setting types of inputted code to pass cracking types
 def setType(t):
     global type
     t = t.lower()
-    if t == "m":
+    if t == "md5":
         type = "MD5"
-    elif t == "p":
+    elif t == "plaintext":
         type = "PlainText"
-    elif t == "b":
+    elif t == "bcrypt":
         type = "BCrypt"
-    elif t == "s":
+    elif t == "sha-256":
         type == "SHA-256"
 
 #setting whether inputted method is dictionary or brute force
 def setMethod(m):
     global method
-    if m=="D":
-        method = "dictionary"
-    elif m=="B":
-        method = "Brute Force"
+    method = m
 
 #comparing type to types from my set list to determine which type to use
 def compareType(t2):
