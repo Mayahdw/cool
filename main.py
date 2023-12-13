@@ -23,7 +23,7 @@ def setType(t):
 #setting whether inputted method is dictionary or brute force
 def setMethod(m):
     global method
-    method = m.lower()
+    method = m.rstrip().lower()
 
 #comparing type to types from my set list to determine which type to use
 def compareType(t2):
