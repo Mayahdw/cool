@@ -39,6 +39,7 @@ if pwd in typeList or pwd in methodList:
     quit()
 
 #if method is dictionary, will check which the type is
+print(len(sys.argv))
 givenType = sys.argv[2]
 givenMethod = sys.argv[3]
 for x in typeList:
