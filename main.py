@@ -40,15 +40,14 @@ if pwd in typeList or pwd in methodList:
     quit()
 
 #if method is dictionary, will check which the type is
-if method == "dictionary":
-    givenType = sys.argv[2]
-    givenMethod = sys.argv[3]
-    for x in typeList:
-        if x == givenType:
-            setType(x)
-    for a in methodList:
-        if a == givenMethod:
-            setMethod(a)
+givenType = sys.argv[2]
+givenMethod = sys.argv[3]
+for x in typeList:
+    if x == givenType:
+        setType(x)
+for a in methodList:
+    if a == givenMethod:
+        setMethod(a)
 
 #setting defaults in case the input isn't possible
 if len(type)==0:
