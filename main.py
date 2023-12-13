@@ -48,6 +48,8 @@ for x in typeList:
 for a in methodList:
     if a.lower() == givenMethod.lower():
         setMethod(a)
+if givenType=="sha-256":
+    type = "sha-256"
 
 #setting defaults in case the input isn't possible
 if len(type)==0:
