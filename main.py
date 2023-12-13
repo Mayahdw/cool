@@ -5,7 +5,7 @@ type = ""
 method = ""
 dict_File = ""
 typeList = ["MD5", "PlainText", "BCrypt", "SHA-256"]
-methodList = ["dictionary", "Brute Force"]
+methodList = ["dictionary", "bruteforce"]
 
 #setting types of inputted code to pass cracking types
 def setType(t):
@@ -24,8 +24,6 @@ def setType(t):
 def setMethod(m):
     global method
     method = m.lower()
-    if m=="bruteforce":
-        method="Brute Force"
 
 #comparing type to types from my set list to determine which type to use
 def compareType(t2):
@@ -46,9 +44,11 @@ givenMethod = sys.argv[3:]
 for x in typeList:
     if x.lower() == givenType:
         setType(x)
+
 for a in methodList:
     if a.lower() == givenMethod:
         setMethod(a)
+
 if givenType=="sha-256":
     type = "sha-256"
 
@@ -59,7 +59,7 @@ if len(type)==0:
 if len(method)==0:
     print("*Method not found, default method : Dictionary*")
     setMethod("dictionary")
-if method == "brute force" and type != "plaintext":
+if method == "bruteforce" and type != "plaintext":
     print("*Not possible, Brute Force can only work with Plain Text")
     quit()
 
@@ -89,7 +89,7 @@ if method == "dictionary":
     quit()
 
 #If brute force is possible (if it's plain text), solves hash
-if method == "Brute Force":
+if method == "bruteforce":
     pwd2 = ""
     val = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
     for x in pwd.rstrip():
