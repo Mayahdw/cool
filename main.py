@@ -59,7 +59,7 @@ if len(type)==0:
 if len(method)==0:
     print("*Method not found, default method : Dictionary*")
     setMethod("dictionary")
-if (method == "bruteforce") and not (type == "plaintext"):
+if method == "bruteforce" and type != "plaintext":
     print("*Not possible, Brute Force can only work with Plain Text*")
     quit()
 
