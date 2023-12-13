@@ -3,12 +3,12 @@
 - Mayah Whitmire and Elisa Garcia
 # Command Arguements
 input in plaintext
-types=
+#types=
 - plaintext
 - md5
 - bcrypt
 - sha-256
-methods=
+#methods=
 - dictionary
 - brute force
 # Dependencies
