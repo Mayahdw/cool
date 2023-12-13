@@ -69,7 +69,7 @@ if method == "dictionary":
         newPass = line.rstrip().encode("utf-8")
         if compareType("BCrypt"):
             hash2 = pwd.rstrip().encode("utf-8")
-            if bcrypt.checkpw(hashedPass, hash2):
+            if bcrypt.checkpw(newPass, hash2):
                 print("password : " + line)
                 quit()
         elif compareType("PlainText"):
